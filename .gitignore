@@ -1,6 +1,6 @@
 *.sql
 *.csv
-grading_lists/
+grading_lists
 setenv*
 !setenv_example
 config/settings/production.py
