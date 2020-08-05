@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block scripts %}
+{{ block.super }}
+<script src="{% static 'js/d3.v4.min.js' %}"></script>
+<script src="{% static 'js/histogram.js' %}"></script>
+{% endblock scripts %}
+
+{% block content %}
+{{ block.super }}
+
+<p class="info">All players at 2020-07-01</p>
+
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <svg id="graph" width="960" height="600" style="border: 1px solid gray;"></svg>
+    </div>
+</div>
+
+<script>
+d3.json("/statistics/api/distrib", function(data) { draw(data); });
+</script>
+
+{% endblock content %}

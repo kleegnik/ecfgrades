@@ -1,0 +1,14 @@
+# --- example environment setup ---
+# source this file with:
+#
+#  . setenv_example
+#
+
+DBNAME="my_database"
+DBUSER="username"
+DBPASSWORD="password"
+DBHOST="127.0.0.1"
+DBPORT='5432'
+DJANGO_SECRET_KEY='some random key'
+
+export DBNAME DBUSER DBPASSWORD DBHOST DBPORT DJANGO_SECRET_KEY

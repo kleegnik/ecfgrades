@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{# load the Bootstrap tag library #}
+{% load bootstrap4 %}
+
+{% block content %}
+{{ block.super }}
+
+<p class="title"><i class="fas fa-chess-bishop"></i>
+Search for a player in the grading database
+<i class="fas fa-chess-bishop"></i></p>
+<hr>
+
+<form action="/grades/" method="POST">
+  {% csrf_token %}
+  <p class="title">
+  {{ form.name }}
+  {{ form.timepoint }}
+  <input type="submit" value="Search" />
+  </p>
+</form>
+
+{% if grades %}
+  <div class="info">{{ timepoint|date:"F Y" }}: {{ grades|length }} players</div>
+
+  <table class="table tablesorter table-bordered">
+  <thead>
+    <tr>
+    <th>Ref</th>
+    <th>Name</th>
+    <th>Sex </th>
+    <th>Grade </th>
+    <th>Age </th>
+    <th>Club</th>
+    <th>Category </th>
+  </tr>
+  </thead>
+  <tbody>
+    {% for g in grades %}
+    <tr>
+      <td>{{ g.player_id }}</td>
+      <td><a href="{% url 'grades:detail' g.player_id %}">{{ g.player.fullname }}</a></td>
+      <td>{{ g.player.sex }}</td>
+      <td>{{ g.gradenum }}</td>
+      <td>{{ g.age|default_if_none:"" }}</td>
+      <td>{{ g.club1.clubname }}</td>
+      <td>{{ g.category }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+  </table>
+<!--
+  <div id="pager" class="pager">
+    <form>
+      <img src="static/first.png" class="first"/>
+      <img src="static/prev.png" class="prev"/>
+      <input type="text" class="pagedisplay"/>
+      <img src="static/next.png" class="next"/>
+      <img src="static/last.png" class="last"/>
+      <select class="pagesize">
+        <option selected="selected" value="10">10</option>
+        <option value="20">20</option>
+        <option value="30">30</option>
+        <option value="40">40</option>
+      </select>
+    </form>
+  </div>
+-->
+{% endif %}
+
+{% endblock content %}

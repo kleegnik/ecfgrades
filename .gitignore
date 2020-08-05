@@ -1,0 +1,37 @@
+*.sql
+*.csv
+grading_lists/
+setenv*
+!setenv_example
+config/settings/production.py
+config/settings/testing.py
+config/static
+scratch/
+
+*.py[cod]
+__pycache__
+.~lock*
+*.xlsx
+
+# Logs
+logs
+*.log
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+nosetests.xml
+htmlcov
+
+# Vim
+*~
+*.swp
+*.swo
+
+staticfiles/
+.cache/
+*.ignore
+
+docs/build
+

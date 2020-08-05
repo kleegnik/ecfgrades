@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{# load the Bootstrap tag library #}
+{% load bootstrap4 %}
+
+{% block content %}
+{{ block.super }}
+
+<h1>{{ player.fullname }}</h1>
+
+{% comment %}
+<p>{{ player.grade }}</p>
+<p>{{ player.clubnam1_text }}</p>
+{% endcomment %}
+
+{% endblock content %}

@@ -1,0 +1,135 @@
+body {
+  background-color: white;
+}
+
+.navbar {
+/*
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+*/
+  height: 30px;
+}
+
+.navbar-custom {
+  background-color: #658686;
+  color: #f7f7f7;
+}
+
+a.nav-link {
+  text-decoration: none;
+  color: white;
+}
+
+.container-fluid {
+  padding-top: 35px;
+}
+
+.title {
+  background-color: white;
+  color: black;
+  border-radius: 8px;
+  padding: 0 5px 0 5px;
+  margin-top: 5px;
+  font-family: monospace;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.info {
+  background-color: #efe;
+  color: black;
+  border-radius: 5px;
+  padding: 0 5px 0 5px;
+  margin-top: 5px;
+  font-family: sans-serif;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+h1 {
+  font-family: serif;
+  text-align: center;
+  margin-top: 10px;
+  padding-left: 10px;
+  border: 2px solid #a0a080;
+  border-radius: 5px;
+  background-color: #c0c0a0;
+}
+
+.detail {
+  background-color: #eee;
+}
+
+/* ------------------------------------------------ */
+/* form layout */
+.entryform {
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+  background-color: #f7fafd;
+  padding: 5px;
+}
+
+.entryform td {
+  padding: 5px;
+}
+
+td.formlabel {
+  text-align: right;
+  font-size: 1.0em;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #57b;
+}
+
+th.formlabel {
+  text-align: center;
+  font-size: 1.0em;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #57b;
+}
+
+/* for CSS table layouts */
+.entryformlabel {
+  display: table-cell;
+  text-align: center;
+  font-size: 1.0em;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #57b;
+}
+.entryformrow { display: table-row; }
+.entryformcell {
+  display: table-cell;
+  padding: 5px;
+}
+.entryformradio {
+  background-color: #eee;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 1px 5px 8px 5px;
+}
+
+/* ------------------------------------------------ */
+/* bar chart */
+.bar rect {
+  fill: #FABA33;
+}
+
+.bar text {
+  fill: #111;
+  font: 10px sans-serif;
+}
+div.tooltip {
+  position: absolute;
+  text-align: center;
+  width: 120px;
+  height: 40px;
+  padding: 2px;
+  font: 12px sans-serif;
+  background: lightsteelblue;
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
